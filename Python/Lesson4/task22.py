@@ -16,13 +16,15 @@ while m > 0:
     array2 += [randint(0,10)]
     m -= 1
 
-result = []
+result = set()
 
 for a1 in array1:
     for a2 in array2:
         if a1 == a2 and not a1 in result:
-            result += [a1]
+            result.add(a1)
             break
+
+result = list(result)
 
 print(f"array1 = {array1}")
 print(f"array2 = {array2}")
